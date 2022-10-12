@@ -1,0 +1,53 @@
+.picture-list {
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+    flex-grow: 0;
+	align-items: stretch;
+	justify-content: center;
+    max-height: 100%;
+	max-width: 100%;
+  }
+
+.picture-list > div, .picture-list > span {
+    align-self: center;
+    width: 100%;	
+}
+
+.picture-list > span {
+    display: inline-block;
+}
+
+.picture-list > div {
+    display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	justify-content: space-between;
+	align-items: center;
+}
+
+.image-item {
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+    height: 100%;
+    padding: 0.5em;
+}
+
+.image-item > img, .image-item > span {
+    display: inline-block;
+    align-self: center;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.image-item > span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.image-item > img {
+    flex-grow: 1;
+	object-fit: contain;
+    background-color: black;
+}
